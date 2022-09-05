@@ -1,0 +1,844 @@
+.inner {
+    width: 100%;
+    max-width: 1280px;
+}
+
+#wrap {
+    background-color: #F2FDFD;
+    position: relative;
+    z-index: 0;
+    height: 100%;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.title_color {
+    color: #01261C;
+}
+
+.icon_color {
+    color: #F9D8D8;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+hr {
+    border-bottom: 1px solid #e3ecf5;
+}
+
+.top_btn1 {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    border-radius: 50%;
+    background: #f2f2f2;
+    padding: 15px;
+    transition-duration: .3s;
+}
+
+.top_btn2 {
+    position: fixed;
+    bottom: 140px;
+    right: 30px;
+    border-radius: 50%;
+    background: #f2f2f2;
+    padding: 15px;
+    transition-duration: .3s;
+}
+
+.top_btn1:hover,
+.top_btn2:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.scroll {
+    background: rgba(227, 236, 245, 0.5);
+}
+
+.box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.fadein {
+    opacity:1;
+}
+
+/* header */
+
+#header .logo:hover {
+    cursor: pointer;
+}
+
+/* opacity와  backdrop-filter 효과를 이용하여 영역 아래 영역을 살짝 비치게 가능.*/
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    transition-duration: .3s;
+    /* opacity: 0.7;
+    backdrop-filter: blur(30px);
+    background-color: #fff; */
+}
+
+#header div.flex {
+    transition-duration: 0.3s;
+    position: relative;
+    z-index: 2;
+}
+
+#header>div.flex {
+    height: 113px;
+}
+
+#header .logo {
+    margin-top: 35px;
+}
+
+#header div.flex:hover {
+    /* background-color: rgba(227,236,245,0.5); */
+    background-color: #e3ecf5;
+    /* 지금 적용하는 색상의 rgb 컬러 */
+}
+
+#depth1.inner {
+    margin: 0 auto;
+    text-align: center;
+    margin: 45px 0;
+    font-size: 20px;
+    width: 100%;
+}
+
+#depth1.flex.inner>li {
+    width: 120px;
+}
+
+#gnb>.flex.inner>li>a {
+    transition-duration: 0.3s;
+    position: relative;
+}
+
+#gnb>.flex.inner>li>a::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #D25B62;
+    position: absolute;
+    bottom: -45px;
+    left: 0;
+    transform: scaleX(0);
+    transition-duration: 0.3s;
+}
+
+#gnb .flex.inner>li:hover>a::before {
+    transform: scaleX(1);
+}
+
+#gnb .flex.inner>li:hover>a {
+    color: #038C3E;
+}
+
+.sub_gnb {
+    /* background-color: rgba(227,236,245,0.5); */
+    background-color: #e3ecf5;
+    position: absolute;
+    width: 100%;
+    top: 113px;
+    left: 0;
+    z-index: 0;
+    height: 0;
+    opacity: 1;
+    overflow: hidden;
+    transition-duration: .3s;
+}
+
+/* 네비 product 클릭 시, 슬라이드 보이게 해줌. */
+.show {
+    height: 350px;
+    opacity: 1;
+}
+
+.sub_gnb>.inner {
+    margin: 0 auto;
+}
+
+.sub_gnb_wrap {
+    padding: 50px 0;
+    margin: 0 0 0 50px;
+}
+
+#product .depth2.hash.flex {
+    justify-content: flex-start;
+    flex-direction: row;
+    color: #038C3E;
+}
+
+#product .depth2.hash.flex>li {
+    padding-right: 30px;
+    margin-bottom: 50px;
+}
+
+#product .depth2.hash.flex>a {
+    display: block;
+    /* margin: 0 20px; */
+    font-size: 18px;
+}
+
+#header #gnb #product .depth2.flex>li>a {
+    transition-duration: .3s;
+}
+
+#header #gnb #product .depth2.flex>li:hover>a {
+    color: #038C3E;
+}
+
+.depth2.subnav.flex {
+    flex-direction: column;
+}
+
+.depth2.flex {
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+
+.depth3.flex {
+    justify-content: space-between;
+}
+
+.depth2.flex>a {
+    display: block;
+    font-size: 16px;
+    margin-right: 40px;
+}
+
+.depth2.flex .depth3.flex li>a {
+    font-size: 12px;
+    line-height: 1.5;
+    transition-duration: .3s;
+    display: block;
+    padding: 0 10px;
+}
+
+.depth2.flex .depth3.flex li {
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+}
+/* white-space : nowrap 을 주기 전엔, 띄어쓰기하면 계속 두 줄로 되었는데, 해당 속성 적용하니 띄어쓰기해도 한 줄로 잘 나옴. */
+
+.depth2.flex .depth3.flex li:hover>a {
+    color: rgb(255, 170, 0);
+}
+
+
+/* mobile_nav */
+
+
+#mobile_nav {
+    position: relative;
+}
+
+.small_nav_btn_box {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    /* background-color: #038C3E; */
+    z-index: 100;
+    cursor: pointer;
+}
+
+.small_nav_btn_box .mobile_btn {
+    width: 30px;
+    height: 3px;
+    background: #333;
+    margin: 10px 0;
+    position: absolute;
+    right: 0;
+}
+
+.click {
+    transition-duration: .3s;
+}
+
+.mobile_btn span:hover {
+    cursor: pointer;
+}
+
+.mobile_btn:nth-child(1) {
+    top: 0;
+}
+
+.mobile_btn.click:nth-child(1) {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.mobile_btn:nth-child(2) {
+    top: 10px;
+    width: 15px;
+}
+
+.mobile_btn.click:nth-child(2) {
+    top: 10px;
+    width: 0px;
+}
+
+.mobile_btn:nth-child(3) {
+    top: 20px;
+}
+
+.mobile_btn.click:nth-child(3) {
+    top: 20px;
+    transform: rotate(-45deg);
+}
+
+.small_nav_btn_box , #mobile_nav , .box {
+    display: none;
+}
+
+
+/* mobile_nav end */
+
+.icon_container {
+    font-size: 30px;
+    margin: 45px 20px 0 0;
+    width: 180px;
+    text-align: center;
+}
+
+.icon_container a:nth-child(2) i {
+    margin: 0 15px;
+}
+
+.icon_container a i {
+    transition-duration: 0.3s;
+}
+
+.icon_container a i:hover {
+    color: #D25B62;
+}
+
+/* ---------------------#main_slider */
+
+#main_slide {
+    position: relative;
+}
+
+#main_slide div.inner {
+    /* height: 100vh; */
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.main_slider_wrap {
+    width: 100%;
+    height: 100vh;
+    /* background-image: url(../image/main_slider1.jpg); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main_slide .textBox {
+    position: absolute;
+    width: 50%;
+    top: 20rem;
+    right: 0;
+}
+
+#main_slide .title_text_wrap {
+    margin-bottom: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+#main_slide .sub_text_wrap {
+    line-height: 1.3;
+}
+
+#main_slide .textBox h5 {
+    margin-left: 8px;
+}
+
+#main_slide .textBox h1 {
+    font-size: 5rem;
+    color: #01261C;
+}
+
+#main_slide .textBox p {
+    font-size: 1.25rem;
+    font-family: 'HallymGothic';
+    font-weight: 100;
+}
+
+#main_slide .textBox p:nth-of-type(2) {
+    margin: 10px 0;
+}
+
+#slide2 {
+    font-family: 'MICEMyungjo'
+}
+
+#slide2 .textBox {
+    position: absolute;
+    top: 38vh;
+    right: -47%;
+    color: #ffffff;
+    width: 100%;
+}
+
+#slide2 .title_text_wrap {
+    font-size: 48px;
+}
+
+#slide2 .sub_text_wrap p {
+    font-family: 'MICEMyungjo';
+    font-size: 58px;
+}
+
+#main_slide #slide2 .sub_text_wrap {
+    line-height: 1.2;
+}
+
+.store_btn {
+    display: block;
+    width: 120px;
+    height: 40px;
+    background: #eef8ff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    color: #72bbda;
+    margin-top: 70px;
+    transition-duration: .3s;
+    font-family: HallymGothic;
+    font-size: 100;
+}
+
+.store_btn:hover {
+    background: #038C3E;
+    color: #eef8ff;
+}
+
+#slide3 .textBox {
+    top:220px;
+    left: 0;
+    color: #fff;
+}
+
+#slide3 .title_text_wrap h1 {
+    font-size: 72px;
+    color: #fff;
+}
+
+#slide3 .store_btn {
+    margin-top: 70px;
+}
+
+/* #product_container */
+
+#product_container {
+    margin-bottom: 6.25rem;
+    padding-top: 100px;
+}
+
+#product_container .inner {
+    margin: 0 auto;
+}
+
+#product_container .imgBox_wrap {
+    width: 100%;
+    max-width: 620px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+#slide3 .store_btn:hover {
+    background: #F2FDFD;
+    color: #377bb0;
+}
+
+/* #product_container .imgBox_wrap img {
+} */
+
+#product_container .imgBox {
+    width: 50%;
+}
+
+/* :nth-child(even) << 짝수 선택자 // :nth-child(odd) << 홀수 선택자! 개뀰 */
+#product_container .imgBox:nth-child(even) {
+    margin-top: 4rem;
+}
+
+#product_container .imgBox img {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#product_container .imgBox a {
+    display: block;
+}
+
+#product_container .imgBox p {
+    position: relative;
+    top: 10%;
+    left: 0;
+    text-align: left;
+    margin-left: 30px;
+}
+
+/* 스크롤 시, 텍스트 박스 같이 밑으로 내려가는 부분 */
+
+.container_wrap {
+    opacity: 0;
+}
+
+.container_wrap .textBox {
+    position: sticky;
+    top: 113px;
+    /* background:red; */
+    width: 550px;
+    height: 100%;
+}
+
+.text_container {
+    margin-left: 3.125rem;
+}
+
+.container_wrap .textBox h2 {
+    font-size: 4rem;
+    margin-bottom: 3.75rem;
+    color: #01261C;
+}
+
+.container_wrap .textBox .text {
+    font-size: 1.375rem;
+    font-family: HallymGothic;
+    font-weight: 100;
+    line-height: 2.3;
+    margin-bottom: 4.375rem;
+}
+
+.btn {
+    width: 140px;
+    height: 45px;
+    background-color: #a9a9a9;
+    text-align: center;
+    line-height: 2.8;
+    color: #F2FDFD;
+    transition: all .4s ease;
+    margin-left: 3.125rem;
+}
+
+.btn:hover {
+    background-color: #038C3E
+}
+
+/* material-card-container  */
+
+#material-card-container {
+    margin-bottom: 100px;
+}
+
+.card-container {
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    opacity: 0.7;
+    /* filter: brightness(80%); */
+    filter: grayscale(50%);
+    transition-duration: .4s;
+}
+
+.card:hover {
+    opacity: 1;
+    /* filter: brightness(100%); */
+    filter: grayscale(0);
+    transform: translate(-2%, -2%);
+    box-shadow: 5px -5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card h4 {
+    font-size: 1.875rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #F2FDFD;
+    opacity: 0;
+    transition-duration: .4s;
+}
+
+.card:hover h4 {
+    opacity: 1;
+}
+
+.card img {
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* #brand_story */
+
+#brand_story {
+    height: 53.125rem;
+}
+
+#brand_story a {
+    display: inline-block;
+}
+
+#brand_story .inner {
+    margin: 0 auto;
+}
+
+#brand_story .flex {
+    justify-content: flex-start;
+}
+
+#brand {
+    width: 100%;
+    max-width: 1920px;
+    height: 31.25rem;
+    position: relative;
+    overflow: hidden;
+}
+
+#brand .imgBox {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../image/matt-artz-nTRDnDdDYk8-unsplash.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* background-attachment << css로 페럴렉스 효과 주는 속성. 근데 모바일에선 잘 안 되니까 js로 효과 구현해보기. */
+
+#brand h2 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    color: #F2FDFD
+}
+
+#brand_story .inner .imgBox {
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#brand_story .inner.flex {
+    position: relative;
+    top: -12.5rem;
+}
+
+#brand_story .textBox_wrap {
+    width: 100%;
+    height: 25rem;
+    min-width: 40rem;
+    background: #F2FDFD;
+}
+
+#brand_story .textBox {
+    margin-left: 3.125rem;
+}
+
+#brand_story h3 {
+    font-size: 3rem;
+    margin: 1.875rem 0 50px 0;
+    color: #01261C;
+}
+
+#brand_story .textBox p {
+    font-size: 1.125rem;
+    font-family: HallymGothic;
+    font-weight: 100;
+    line-height: 2;
+}
+
+#brand_story .textBox p:last-child {
+    margin-bottom: 6.25rem;
+}
+
+/* #magazine_container */
+
+#magazine_container {
+    margin: 0 auto;
+    margin-bottom: 6.25rem;
+}
+
+#magazine_container a {
+    display: inline-block;
+}
+
+#magazine_container .imgBox {
+    width: 100%;
+    max-width: 640px;
+    height: 400px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#magazine_container .textBox_wrap {
+    width: 100%;
+    max-width: 40rem;
+}
+
+#magazine_container .textBox,
+#magazine_container .textList {
+    margin: 0 0 1.875rem 3.125rem;
+}
+
+
+#magazine_container h2 {
+    font-size: 3rem;
+    color: #01261C;
+}
+
+#magazine_container .textBox>p {
+    font-family: HallymGothic;
+}
+
+#magazine_container .textList li {
+    font-size: 1.125rem;
+    line-height: 2.86;
+    position: relative;
+}
+
+.on {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.125rem;
+    margin-left: -100px;
+    padding-left: 50px;
+    background: #D25B62;
+    color: #F2FDFD;
+    transition-duration: .4s;
+}
+
+
+/*  footer_container */
+
+#footer_container {
+    margin: 0 auto;
+    font-family: HallymGothic;
+    font-weight: 100;
+    position: relative;
+}
+
+#footer_container .footer_top {
+    margin: 50px 0 100px 0;
+}
+
+.footer_icon {
+    margin-top: -15px;
+}
+
+/* .footer_icon a {
+    margin-right: 15px;
+} */
+
+.footer_icon img {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+}
+
+.info {
+    justify-content: flex-start;
+}
+
+.info li {
+    margin-right: 30px;
+}
+
+.info li:last-child {
+    font-weight: bold;
+}
+
+.detail_info {
+    font-size: 14px;
+    justify-content: flex-start;
+    line-height: 2.35;
+    margin-bottom: 50px;
+}
+
+.detail_info ul:last-child {
+    margin-left: 30px;
+}
+
+.footer_bot {
+    font-size: 14px;
+    justify-content: flex-start;
+    line-height: 2;
+    padding: 50px 0;
+}
+
+.footer_bot div:nth-last-child(2) {
+    margin-left: 30px;
+}
+
+#copywrite {
+    position: relative;
+    right: -145px;
+}
+
+/* -----------------------BP 1440--------------- */
+@media all and (max-width:1440px) {
+    #header>div.flex {
+        display: none;
+    }
+
+    #header.scroll {
+        background: none;
+    }
+
+    .small_nav_btn_box {
+        display: block;
+    }
+
+    .small_nav_btn_box {
+        display: block;
+    }
+}
+
+/* ------------------------keyframes---------------------- */
+/* @keyframes  {
+
+} */

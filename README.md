@@ -1,2 +1,0 @@
-# SIDMOOL
-renewal_page
