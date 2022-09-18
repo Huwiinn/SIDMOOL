@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIDMOOL_프로젝트1_박휘인</title>
     <link rel="stylesheet" href="css/common.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -15,7 +15,7 @@
     관공서 등 웹페이지 작업은 폐쇄적이므로 cdn사용을 권장하지 않음.
 하지만 cdn의 장점으로는 빠른 최신화와, 유지보수에 아주 탁월함.  -->
 
-    <!-- ** css 적용 안될 때는 css link 오타 확인해보기 -->
+<!-- ** css 적용 안될 때는 css link 오타 확인해보기 -->
 
 </head>
 
@@ -32,14 +32,14 @@
                         <!--<a>가 없어야 클릭 시, 하위메뉴만 그 자리에 뜰 것 같음. >> 그렇다. a태그에 :hover { cursor : pointer } 적용하기.-->
                         <!-- data-src 적용된 것만 찾게 구현이 안된다. -->
                         <li><a href="#">Event</a></li>
-                        <li><a href="#" class="sub_gnb_review">Review</a></li>
+                        <li><a href="#" data-src="sub_gnb_review">Review</a></li>
                         <li><a href="#">Notice</a></li>
                         <li><a href="#">Brand</a></li>
-                        <li><a href="#" class="sub_gnb_CS">CS Center</a></li>
+                        <li><a href="#" data-src="sub_gnb_CS">CS Center</a></li>
                     </ul>
                     <div class="sub_gnb">
                         <div class="inner">
-                            <div id="product" class="sub_gnb_wrap .panel">
+                            <div id="product" class="sub_gnb_wrap">
                                 <ul class="depth2 hash flex">
                                     <li><a href="#">#All</a></li>
                                     <li><a href="#">#Best</a></li>
@@ -102,13 +102,13 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div id='review' class="sub_gnb_wrap">
+                            <div id='review'>
                                 <ul>
                                     <li><a href="#">Best Review</a></li>
                                     <li><a href="#">Photo Review</a></li>
                                 </ul>
                             </div>
-                            <div id="CS" class="sub_gnb_wrap panel">
+                            <div id="CS">
                                 <ul>
                                     <li><a href="#">Q&A</a></li>
                                     <li><a href="#">고객문의</a></li>
@@ -125,29 +125,30 @@
                         <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
                 </div>
-
-                <!-- mobile nav -->
-                <div class="small_nav_btn_box">
-                    <span class="mobile_btn"></span>
-                    <span class="mobile_btn"></span>
-                    <span class="mobile_btn"></span>
-                </div>
-                <nav id="mobile_nav">
-                    <ul id="recap_nav">
-                        <li><a href="#">Event</a></li>
-                        <li><a href="#">Review</a></li>
-                        <li><a href="#">Notice</a></li>
-                        <li><a href="#">Brand</a></li>
-                        <li><a href="#">CS Center</a></li>
-                    </ul>
-                    <div class="box"></div>
-                </nav>
             </div>
 
+            <div class="small_nav_btn_box">
+                <span class="mobile_btn"></span>
+                <span class="mobile_btn"></span>
+                <span class="mobile_btn"></span>
+            </div>
+            <nav id="mobile_nav">
+                <ul id="recap_nav">
+                    <li><a href="#">Event</a></li>
+                    <li><a href="#">Review</a></li>
+                    <li><a href="#">Notice</a></li>
+                    <li><a href="#">Brand</a></li>
+                    <li><a href="#">CS Center</a></li>
+                </ul>
+                <div class="box"></div>
+            </nav>
         </header>
 
+        <!-- 여기에 Slick 적용을 여러번 시도해봤는데, 정상적으로 작동하지 않아서 한참 생각했습니다.. -->
+        <!-- 백그라운드 속성으로 이미지를 첨부하면, 슬릭으로 슬라이드 만드는 것도 가능한가요?? -->
+        <!-- css 254번에 원래 이미지 url로 첨부했었는데, 궁금합니다. -->
         <section id="main_slide" class="main_slider_wrap lazy">
-            <div id="slide1">
+            <div class='slide' id="slide1">
                 <div class="inner">
                     <div class="textBox">
                         <div class="title_text_wrap">
@@ -162,9 +163,8 @@
                     </div>
                 </div>
                 <img src="./image/main_slider1.jpg" alt="">
-            </div>
-            <!--slide 1-->
-            <div id="slide2">
+            </div><!--slide 1-->
+            <div class='slide' id="slide2">
                 <div class="inner">
                     <div class="textBox">
                         <div class="title_text_wrap">
@@ -178,9 +178,8 @@
                     </div>
                 </div>
                 <img src="./image/main_slider2.jpg" alt="">
-            </div>
-            <!--slide 2-->
-            <div id="slide3">
+            </div><!--slide 2-->
+            <div class='slide' id="slide3">
                 <div class="inner">
                     <div class="textBox">
                         <div class="title_text_wrap">
@@ -194,20 +193,13 @@
                     </div>
                 </div>
                 <img src="./image/main_slider3.jpg" alt="">
-            </div>
-            <!--slide 3-->
+            </div><!--slide 3-->
         </section>
-        <section id="mobile_slide">
-                <div class="textBox">
-                    <p>안정되어야 할 때,</p>
-                    <p>Refresh my skin</p>
-                    <p>SID-MOOL</p>
-                </div>
-        </section>
+
 
         <section id="product_container">
             <div class="inner">
-                <div id="new" class="container_wrap flex ">
+                <div id="new" class="container_wrap flex">
                     <div class="textBox">
                         <div class="text_container">
                             <h2>New</h2>
@@ -251,7 +243,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="best" class="container_wrap flex ">
+                <div id="best" class="container_wrap flex">
                     <div class="textBox">
                         <div class="text_container">
                             <h2>Best</h2>
@@ -295,7 +287,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="material" class="container_wrap flex ">
+                <div id="material" class="container_wrap flex">
                     <div class="textBox">
                         <div class="text_container">
                             <h2>Material</h2>
@@ -340,7 +332,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="function" class="container_wrap flex ">
+                <div id="function" class="container_wrap flex">
                     <div class="textBox">
                         <div class="text_container">
                             <h2>Function</h2>
@@ -497,15 +489,15 @@
                 <div class="imgBox">
                     <img src="./image/Logo.png" alt="footer logo">
                 </div>
-                <div class="text_box">
+                <div>
                     <p>통신판매업신고번호 : 제2008-대전중구-0247호</p>
                     <p>화장품 제조판매업 둥록필증 제 1163호</p>
                 </div>
-                <div class="text_box">
+                <div>
                     <p>사업자등록번호 : 305-81-94469</p>
                     <p>건강기능판매업 : 대전 중구 제503</p>
                 </div>
-                <div class="text_box" id="copywrite">
+                <div id="copywrite">
                     <p>COPYWRITE 2022.08.16 부산IT전문학원 UI/UX프로덕트 박휘인</p>
                 </div>
             </div>
@@ -514,7 +506,7 @@
 
     <!-- fixed Btn -->
     <a href="#" class="top_btn1" alt="topBtn">
-        <img src="./image/btnTalk32.png" alt="">
+        <img src="./image/btntalk32.png" alt="">
     </a>
     <a href="#" class="top_btn2" alt="topBtn">
         <img src="./image/topbtn32.png" alt="">

@@ -95,7 +95,6 @@
     background-position: center center;
     background-repeat: no-repeat;
     object-fit: cover;
-    /* img가 overflow되면 사진이 짤림. */
 }
 .slick-slide.slick-loading img
 {
