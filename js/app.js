@@ -10,9 +10,9 @@
     $("#gnb").each(function () {
         var anchor = $(this).find("#depth1 a");
         // var anchor_on = $(this).find(".sub_gnb_wrap.show"); >> 하나는 열려있게 하고 싶을 때, 해당 코드 활성화. (탭=아코디언)
-        var href = anchor.attr("href");
+        var href = anchor.attr("data-src");
         anchor.each(function () {
-        var sub_nav = $(this).attr("href");
+        var sub_nav = $(this).attr("data-src");
 
         $(this).mouseenter(function (e) {
             e.preventDefault();
@@ -50,6 +50,23 @@
     }); //tabSet
     // ** tabset에서 .tabs a를 클릭하여 href를 찾으면, penels 안에서 각각의 penel을 찾아서 이미지를 변경해줌.
     // 즉, 탭셋 요소를 클릭하면 패널 요소가 변경된다. (탭셋 - 패널)  
+
+    /* .small_nav_btn_box를 클릭하면, #mobile_nav에 .show를 붙히기 */
+    // let click_close = 0;
+    let click_open = 0;
+
+    $(".small_nav_btn_box").click(function () {
+      if (click_open == 0) {
+        $("#mobile_nav").addClass("show");
+        click_open = 1;
+        $(".small_nav_btn_box").addClass("off")
+      } else {
+        $("#mobile_nav").removeClass("show");
+        click_open = 0;
+        $(".small_nav_btn_box").removeClass("off")
+    };
+    });
+
     //마우스 scroll 시에 상단 navbar 색상 변하는 이벤트
     $(window).scroll(function () {
         if ($(document).scrollTop() > 5) {

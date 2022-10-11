@@ -30,15 +30,15 @@
                 </h1>
                 <nav id="gnb">
                     <ul id="depth1" class="flex inner">
-                        <li><a href="#product">Product</a></li>
+                        <li><a data-src="#product" href="product.html" target="_blank" title="상품 목록 페이지로 바로가기">Product</a></li>
                         <li><a href="#">Event</a></li>
-                        <li><a href="#review" class="sub_gnb_review">Review</a></li>
+                        <li><a data-src="#review" href="#" class="sub_gnb_review">Review</a></li>
                         <li><a href="#">Notice</a></li>
                         <li><a href="#">Brand</a></li>
-                        <li><a href="#CS" class="sub_gnb_CS">CS Center</a></li>
+                        <li><a data-src="#CS" href="#" class="sub_gnb_CS">CS Center</a></li>
                     </ul>
                     <div class="sub_gnb">
-                        <div id="product" class="sub_gnb_wrap">
+                        <div id="product" data-src="product" class="sub_gnb_wrap">
                             <div class="inner">
                                 <ul class="depth2 hash flex">
                                     <li><a href="#">#All</a></li>
@@ -103,7 +103,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div id='review' class="sub_gnb_wrap">
+                        <div id='review' data-src="review" class="sub_gnb_wrap">
                             <div class="inner">
                                 <ul>
                                     <li><a href="#">Best Review</a></li>
@@ -111,7 +111,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div id="CS" class="sub_gnb_wrap">
+                        <div id="CS" data-src="CS" class="sub_gnb_wrap">
                             <div class="inner">
                                 <ul>
                                     <li><a href="#">Q&A</a></li>
@@ -131,19 +131,39 @@
                     </div>
                 </div>
 
-                <!-- mobile nav -->
-                <div class="small_nav_btn_box">
+                <!-- mobile nav btn -->
+                <div class="small_nav_btn_box off">
                     <span class="mobile_btn"></span>
                     <span class="mobile_btn"></span>
                     <span class="mobile_btn"></span>
                 </div>
+                <!-- mobile nav btn -->
                 <nav id="mobile_nav">
                     <ul id="recap_nav">
-                        <li><a href="#">Event</a></li>
-                        <li><a href="#">Review</a></li>
-                        <li><a href="#">Notice</a></li>
-                        <li><a href="#">Brand</a></li>
-                        <li><a href="#">CS Center</a></li>
+                        <li class="mobile_depth1"><a href="#">Product</a>
+                            <ul class="mobile_depth2">
+                                <li><a href="#">기능별</a></li>
+                                <li><a href="#">성분별</a></li>
+                                <li><a href="#">고민별</a></li>
+                                <li><a href="#">Began</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobile_depth1"><a href="#">Event</a></li>
+                        <li class="mobile_depth1"><a href="#">Review</a>
+                            <ul class="mobile_depth2">
+                                <li><a href="#">Photo Review</a></li>
+                                <li><a href="#">Best Review</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobile_depth1"><a href="#">Notice</a></li>
+                        <li class="mobile_depth1"><a href="#">Brand</a></li>
+                        <li class="mobile_depth1"><a href="#">CS Center</a>
+                            <ul class="mobile_depth2">
+                                <li><a href="#">Q&A</a></li>
+                                <li><a href="#">고객문의</a></li>
+                                <li><a href="#">찾아오시는 길</a></li>
+                            </ul>
+                        </li>
                     </ul>
                     <div class="mobile_gnb_box"></div>
                 </nav>
@@ -151,7 +171,7 @@
 
         </header>
 
-        <section id="main_slide" class="main_slider_wrap lazy">
+        <section id="main_slide" class="main_slider_container lazy">
             <div id="slide1">
                 <div class="inner">
                     <div class="textBox">
@@ -166,7 +186,7 @@
                         </div>
                     </div>
                 </div>
-                <img src="./image/main_slider1.jpg" alt="">
+                <div class="img_box"></div>
             </div>
             <!--slide 1-->
             <div id="slide2">
@@ -182,7 +202,7 @@
                         <a class="store_btn" href="#">Go store</a>
                     </div>
                 </div>
-                <img src="./image/main_slider2.jpg" alt="">
+                <div class="img_box"></div>
             </div>
             <!--slide 2-->
             <div id="slide3">
@@ -198,7 +218,7 @@
                         <a class="store_btn" href="#">Go store</a>
                     </div>
                 </div>
-                <img src="./image/main_slider3.jpg" alt="">
+                <div class="img_box"></div>
             </div>
             <!--slide 3-->
         </section>

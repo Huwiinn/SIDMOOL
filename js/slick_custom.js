@@ -6,7 +6,7 @@
         dots: true,
         prevArrow: false,
         nextArrow: false,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 3000,
     });
     });
