@@ -152,16 +152,48 @@ $(function () {
     // product.html 상품 리스트
     function moreBtn() {
         let temp_html = `<li>
-                            <a href="#"><img src="./image/aloe.jpg"></a>
+                            <a href="#">
+                                <p>발림성 좋은 크림</p>
+                                <p>자연추출 성분으로 만든 크림입니다. <Br> 피부에 순한 성분으로 보습을 챙기세요.</p>
+                                <img src="./image/crystalweed-cannabis-QrK0mgbk2r0-unsplash.jpg" alt="" title="">
+                            </a>
+                            <div class="bg">
+                                <p>주요성분</p>
+                                <p>시카, 달팽이, 솔잎</p>
+                            </div>  
                         </li>
                         <li>
-                            <a href="#"><img src="./image/aloe.jpg"></a>
+                            <a href="#">
+                                <p>발림성 좋은 크림</p>
+                                <p>자연추출 성분으로 만든 크림입니다. <Br> 피부에 순한 성분으로 보습을 챙기세요.</p>
+                                <img src="./image/crystalweed-cannabis-QrK0mgbk2r0-unsplash.jpg" alt="" title="">
+                            </a>
+                            <div class="bg">
+                                <p>주요성분</p>
+                                <p>시카, 달팽이, 솔잎</p>
+                            </div>  
                         </li>
                         <li>
-                            <a href="#"><img src="./image/aloe.jpg"></a>
+                            <a href="#">
+                                <p>발림성 좋은 크림</p>
+                                <p>자연추출 성분으로 만든 크림입니다. <Br> 피부에 순한 성분으로 보습을 챙기세요.</p>
+                                <img src="./image/crystalweed-cannabis-QrK0mgbk2r0-unsplash.jpg" alt="" title="">
+                            </a>
+                            <div class="bg">
+                                <p>주요성분</p>
+                                <p>시카, 달팽이, 솔잎</p>
+                            </div>  
                         </li>
                         <li>
-                            <a href="#"><img src="./image/aloe.jpg"></a>
+                            <a href="#">
+                                <p>발림성 좋은 크림</p>
+                                <p>자연추출 성분으로 만든 크림입니다. <Br> 피부에 순한 성분으로 보습을 챙기세요.</p>
+                                <img src="./image/crystalweed-cannabis-QrK0mgbk2r0-unsplash.jpg" alt="" title="">
+                            </a>
+                            <div class="bg">
+                                <p>주요성분</p>
+                                <p>시카, 달팽이, 솔잎</p>
+                            </div>  
                         </li>`
         $('#product_list').append(temp_html);
     }
