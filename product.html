@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/product.css" type="text/css">
     <link rel="stylesheet" href="css/all.css" type="text/css">
-    <link rel="stylesheet" href="css/slick.css" type="text/css">
-    <link rel="stylesheet" href="css/slick_design.css" type="text/css">
 </head>
 
 <body>
@@ -180,9 +178,9 @@
                     <li><a href="#" title="" target="_self">#SALE</a></li>
                 </ul>
             </div>
-            <div class="flex">
+            <div class="flex detail">
                 <ul>
-                    <li><a href="#" title="" target="_self">#기능별</a>
+                    <li class="depth1 func"><a href="#" title="" target="_self">#기능별</a>
                         <ul class="depth2">
                             <li><a href="#" title="" target="_self">각질관리</a></li>
                             <li><a href="#" title="" target="_self">트러블관리</a></li>
@@ -193,7 +191,7 @@
                     </li>
                 </ul>
                 <ul>
-                    <li><a href="#" title="" target="_self">#성분별</a>
+                    <li class="depth1 material"><a href="#" title="" target="_self">#성분별</a>
                         <ul class="depth2">
                             <li><a href="#" title="" target="_self">녹차</a></li>
                             <li><a href="#" title="" target="_self">티트리</a></li>
@@ -207,7 +205,7 @@
                     </li>
                 </ul>
                 <ul>
-                    <li><a href="#" title="" target="_self">#고민별</a>
+                    <li class="depth1 worry"><a href="#" title="" target="_self">#고민별</a>
                         <ul class="depth2">
                             <li><a href="#" title="" target="_self">바디케어</a></li>
                             <li><a href="#" title="" target="_self">각질케어</a></li>
@@ -223,7 +221,7 @@
                     </li>
                 </ul>
                 <ul>
-                    <li><a href="#" title="" target="_self">#Began</a>
+                    <li class="depth1 began"><a href="#" title="" target="_self">#Began</a>
                         <ul class="depth2">
                             <li><a href="#" title="" target="_self">클렌징</a></li>
                             <li><a href="#" title="" target="_self">기초 에센스</a></li>
@@ -243,9 +241,44 @@
                     </li>
                 </ul>
             </div>
+            
+            <div id="product_container">
+                <ul class="thum_list flex" id="product_list">
+                    <li>
+                        <a href="#">
+                            <p>발림성 좋은 크림</p>
+                            <p>자연추출 성분으로 만든 크림입니다. <Br> 피부에 순한 성분으로 보습을 챙기세요.</p>
+                            <img src="./image/rachel-cheng-Kn19eFm_CLU-unsplash.jpg" alt="" title="">
+                        </a>
+                        <div></div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>발림성 좋은 크림</p>
+                            <p>자연추출 성분으로 만든 크림입니다. <Br> 피부에 순한 성분으로 보습을 챙기세요.</p>
+                            <img src="./image/ryan-wilson-YdpDztAnW9w-unsplash.jpg" alt="" title="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <p>발림성 좋은 크림</p>
+                        <p>자연추출 성분으로 만든 크림입니다. <Br> 피부에 순한 성분으로 보습을 챙기세요.</p>
+                        <img src="./image/ramakrishnan-nataraj-ptMFONhgVho-unsplash.jpg.jpg" alt="" title="">
+                    </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <p>발림성 좋은 크림</p>
+                        <p>자연추출 성분으로 만든 크림입니다. <Br> 피부에 순한 성분으로 보습을 챙기세요.</p>
+                        <img src="./image/crystalweed-cannabis-QrK0mgbk2r0-unsplash.jpg" alt="" title="">
+                    </a>
+                    </li>
+                </ul>
+                <button id="more" onclick="moreBtn()">더보기</button>
+            </div>
         </section>
 
-        <!-- <footer id="footer_container" class="inner">
+        <footer id="footer_container" class="inner">
             <div class="footer_top flex">
                 <ul class="info flex">
                     <li><a href="#">윤리위반신고</a></li>
@@ -290,11 +323,11 @@
                     <p>COPYWRITE 2022.08.16 부산IT전문학원 UI/UX프로덕트 박휘인</p>
                 </div>
             </div>
-        </footer> -->
+        </footer>
     </div>
 
-     <!-- fixed Btn -->
-     <a href="#" class="top_btn1" alt="topBtn">
+    <!-- fixed Btn -->
+    <a href="#" class="top_btn1" alt="topBtn">
         <img src="./image/btnTalk32.png" alt="">
     </a>
     <a href="#" class="top_btn2" alt="topBtn">
@@ -304,8 +337,6 @@
 <script src="https://kit.fontawesome.com/fb3e098bb3.js" crossorigin="anonymous"></script>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/jquery-migrate-3.0.0.js"></script>
-<script src="js/slick.js"></script>
 <script src="js/app.js"></script>
-<script src="js/slick_custom.js"></script>
 
 </html>

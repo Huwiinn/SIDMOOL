@@ -1,4 +1,7 @@
-    $(function () {
+'use strict'
+
+
+$(function () {
         $('#gnb').hover(function(){
             $('#header').css('background','#e3ecf5')
         }, function(){
@@ -102,9 +105,9 @@
     });
 
     let product_new = $("#product_container #new").offset().top - 2000;
-    let product_best = $("#product_container #best").offset().top - 1000;
-    let product_material = $("#product_container #material").offset().top - 500;
-    let product_function = $("#product_container #function").offset().top - 300;
+    let product_best = $("#product_container #best").offset().top - 1900;
+    let product_material = $("#product_container #material").offset().top - 1800;
+    let product_function = $("#product_container #function").offset().top - 1700;
 
     // var container_wrapOffset = $('.container_wrap').offset();
 
@@ -138,6 +141,7 @@
         document.querySelector('#mobile_nav').classList.toggle('active');
         document.querySelector('.mobile_gnb_box').classList.toggle('active');
     })
+})
 
     // const absoluteTop = window.pageYOffset + Element.getBoundingClientRect().top;
     // const relativeTop = Element.getBoundingClientRect().top;
@@ -145,59 +149,60 @@
     //     return window.pageYOffset + Element.getBoundingClientRect().top;
     // }
 
-    let result = 2;
-    let num = 4;
-
-    while (result < 18) {
-        //result < 20은 왜 최종적으로 22가 나오는가?
-        result = result + num;
-        console.log(result);
+    // product.html 상품 리스트
+    function moreBtn() {
+        let temp_html = `<li>
+                            <a href="#"><img src="./image/aloe.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./image/aloe.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./image/aloe.jpg"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./image/aloe.jpg"></a>
+                        </li>`
+        $('#product_list').append(temp_html);
     }
+    // $(function () {
+    //   let li_count = $(".thum_list li").length; // length는 명령어라 ()가 없음. 함수,메소드만() 있다.
+    // //   alert(li_count);
+    //   let click_count = 0;
+    //   for (
+    //     let count = 0;
+    //     count < click_count * 4;
+    //     count++ //3까지 실행될 것.
+    //   ) {
+    //     $(".thum_list li").eq(count).show(); //.eq() 함수는 순차적으로 나올 수 있도록 해줌. >> 구글링해보기
+    //     // alert(count);
+    //   }
 
-    while (result < 20) {
-        result = result + num;
-        console.log(result);
-    }
-    });
-    //result < 20은 왜 최종적으로 22가 나오는가?
+    //   $(".more").click(function () {
+    //     click_count = click_count + 1; // = click_count++
+    //     if (Math.ceil(li_count / 4) > click_count) {
+    //       // click_count보다 크면, li_show를 계속 실행.
+    //       li_show(click_count);
+    //     } else if (Math.ceil(li_count / 4) == click_count) {
+    //       li_show(click_count);
+    //       $(".more").text("줄이기");
+    //     } else {
+    //       $(".thum_list li").hide(400);
+    //       $(".more").text("더보기");
+    //       click_count = 1;
+    //       li_show(click_count);
+    //     }
+    //   });
+    // });
+        
 
-
-    const calculator1 = {
-    add: function (a, b) {
-        console.log(a + b);
-    },
-    };
-
-    const calculator2 = {
-    minus: function (a, b) {
-        console.log(a - b);
-    },
-    };
-
-    const calculator3 = {
-    multiply: function (a, b) {
-        console.log(a * b);
-    },
-    };
-
-    const calculator4 = {
-    divide: function (a, b) {
-        console.log(a / b);
-    },
-    };
-
-    const calculator5 = {
-    powerof: function (a, b) {
-        console.log(a ** b);
-    },
-    };
-
-    calculator1.add(10, 3);
-
-    calculator2.minus(10, 3);
-
-    calculator3.multiply(10, 3);
-
-    calculator4.divide(10, 3);
-
-    calculator5.powerof(10, 3);
+    //     function li_show(click_count) {
+    //       for (
+    //         let count = 1;
+    //         count <= click_count * 4;
+    //         count++ //4까지 실행될 것.
+    //       ) {
+    //         $(".thum_list li").eq(count).show(400); //.eq() 함수는 순차적으로 나올 수 있도록 해줌.
+    //         // alert(count);
+    //       }
+    //     }
